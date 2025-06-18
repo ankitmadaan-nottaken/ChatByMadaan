@@ -85,7 +85,13 @@ class LoginViewController: UIViewController {
                 self.showAlert(message: "Login failed: \(error.localizedDescription)")
             } else {
                 print("✅ Logged in as: \(result?.user.email ?? "")")
-                self.navigationController?.setViewControllers([ChatViewController()], animated: true)
+                let contactsVC = ContactsViewController()
+                let nav = UINavigationController(rootViewController: contactsVC)
+
+                if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+                    sceneDelegate.window?.rootViewController = nav
+                }
+
             }
         }
     }

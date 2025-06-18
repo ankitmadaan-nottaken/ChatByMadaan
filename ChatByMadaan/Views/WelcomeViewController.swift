@@ -112,8 +112,9 @@ class WelcomeViewController: UIViewController {
         
         if Auth.auth().currentUser != nil {
                // User is already logged in
-               print("🔐 User remembered. Redirecting to Chat...")
-               navigationController?.setViewControllers([ChatViewController()], animated: false)
+               print("🔐 User remembered. Redirecting to Contacts...")
+            navigationController?.setViewControllers([ContactsViewController()], animated: false)
+
            }
 
         UIView.animate(withDuration: 0.6,
