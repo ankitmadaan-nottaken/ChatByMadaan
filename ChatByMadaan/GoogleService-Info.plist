@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyChOUm4PSVKyE6axCnKU12mwDvFYeZtLOA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>905468146482</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ankitmadan.ChatByMadaan</string>
+	<key>PROJECT_ID</key>
+	<string>chatbymadaan</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chatbymadaan.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:905468146482:ios:1bd58b5020e1a486a61d2b</string>
+</dict>
+</plist>
