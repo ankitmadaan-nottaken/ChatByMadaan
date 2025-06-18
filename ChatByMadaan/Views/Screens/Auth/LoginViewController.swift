@@ -10,7 +10,8 @@ import UIKit
 import FirebaseAuth
 
 class LoginViewController: UIViewController {
-
+    private let viewModel = LoginViewModel()
+    
     private let emailField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Email"
@@ -74,30 +75,28 @@ class LoginViewController: UIViewController {
     @objc private func didTapLogin() {
         guard let email = emailField.text, !email.isEmpty,
               let password = passwordField.text, !password.isEmpty else {
-            showAlert(message: "Please enter email and password.")
+            showAlert(title: "Login", message: "Please enter email and password.")
             return
         }
 
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
-            guard let self = self else { return }
-
-            if let error = error {
-                self.showAlert(message: "Login failed: \(error.localizedDescription)")
-            } else {
-                print("✅ Logged in as: \(result?.user.email ?? "")")
-                let contactsVC = ContactsViewController()
-                let nav = UINavigationController(rootViewController: contactsVC)
-
-                if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
-                    sceneDelegate.window?.rootViewController = nav
+        viewModel.login(email: email, password: password) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success:
+                    let contactsVC = ContactsViewController()
+                    let nav = UINavigationController(rootViewController: contactsVC)
+                    if let sceneDelegate = self?.view.window?.windowScene?.delegate as? SceneDelegate {
+                        sceneDelegate.window?.rootViewController = nav
+                    }
+                case .failure(let error):
+                    self?.showAlert(title: "Login Failed", message: error.localizedDescription)
                 }
-
             }
         }
     }
 
-    private func showAlert(message: String) {
-        let alert = UIAlertController(title: "Oops", message: message, preferredStyle: .alert)
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }

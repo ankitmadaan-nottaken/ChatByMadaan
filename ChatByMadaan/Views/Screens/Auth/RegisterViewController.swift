@@ -10,6 +10,7 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class RegisterViewController: UIViewController {
+    private let viewModel = RegisterViewModel()
 
     // MARK: - UI Components
 
@@ -82,39 +83,25 @@ class RegisterViewController: UIViewController {
     // MARK: - Actions
 
     @objc private func didTapRegister() {
-        guard let name = nameField.text, !name.isEmpty,
-              let email = emailField.text, !email.isEmpty,
-              let password = passwordField.text, !password.isEmpty else {
-            showAlert(title: "Missing Info", message: "Please fill in all fields.")
-            return
-        }
-
-        Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
-            guard let self = self else { return }
-
-            if let error = error {
-                self.showAlert(title: "Registration Failed", message: error.localizedDescription)
+            guard let name = nameField.text, !name.isEmpty,
+                  let email = emailField.text, !email.isEmpty,
+                  let password = passwordField.text, !password.isEmpty else {
+                showAlert(title: "Missing Info", message: "Please fill in all fields.")
                 return
             }
 
-            guard let uid = result?.user.uid else { return }
-
-            let db = Firestore.firestore()
-            db.collection("users").document(uid).setData([
-                "id": uid,
-                "name": name,
-                "email": email
-            ]) { error in
-                if let error = error {
-                    print("🔥 Firestore error: \(error.localizedDescription)")
-                    self.showAlert(title: "Error", message: "Failed to save user info.")
-                } else {
-                    print("✅ User registered and saved to Firestore")
-                    self.navigateToContacts()
+            viewModel.register(name: name, email: email, password: password) { [weak self] result in
+                guard let self = self else { return }
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success:
+                        self.navigateToContacts()
+                    case .failure(let error):
+                        self.showAlert(title: "Registration Failed", message: error.localizedDescription)
+                    }
                 }
             }
         }
-    }
 
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

@@ -6,6 +6,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     private let tableView = UITableView()
     private var searchController = UISearchController(searchResultsController: nil)
+    private let viewModel = ContactsViewModel()
     
     private var users: [User] = []
     private var filteredUsers: [User] = []
@@ -32,7 +33,8 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         
         setupSearchController()
         setupTableView()
-        fetchUsers()
+        bindViewModel()
+        viewModel.fetchUsers()
     }
     
     private func setupSearchController() {
@@ -49,6 +51,14 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         view.addSubview(tableView)
+    }
+    
+    private func bindViewModel() {
+        viewModel.onUsersUpdated = { [weak self] in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
     }
     
     private func fetchUsers() {
@@ -76,28 +86,27 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredUsers.count
+        return viewModel.filteredUsers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = filteredUsers[indexPath.row].name
+        cell.textLabel?.text = viewModel.filteredUsers[indexPath.row].name
         return cell
     }
     
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedUser = filteredUsers[indexPath.row]
+        let selectedUser = viewModel.filteredUsers[indexPath.row]
         let currentUserID = Auth.auth().currentUser?.uid ?? ""
         let chatID = [currentUserID, selectedUser.id].sorted().joined(separator: "_")
         
-        let chatDocRef = db.collection("chats").document(chatID)
+        let chatDocRef = Firestore.firestore().collection("chats").document(chatID)
         
         chatDocRef.getDocument { [weak self] snapshot, error in
             guard let self = self else { return }
             
             if let snapshot = snapshot, !snapshot.exists {
-                // 🔧 Create the chat document with participants
                 chatDocRef.setData([
                     "participants": [currentUserID, selectedUser.id],
                     "createdAt": FieldValue.serverTimestamp()
@@ -105,15 +114,13 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
                     if let error = error {
                         print("❌ Failed to create chat: \(error.localizedDescription)")
                         return
-                    } else {
-                        print("✅ Chat created with ID: \(chatID)")
                     }
                 }
             }
             
-            // ✅ Proceed to chat view
-            let chatVC = ChatViewController(chatID: chatID, otherUser: selectedUser)
-            self.navigationController?.pushViewController(chatVC, animated: true)
+            let viewModel = ChatViewModel(chatID: chatID, otherUser: selectedUser)
+            let chatVC = ChatViewController(viewModel: viewModel)
+            navigationController?.pushViewController(chatVC, animated: true)
         }
     }
     
@@ -121,15 +128,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: - UISearchResultsUpdating
     func updateSearchResults(for searchController: UISearchController) {
         let searchText = searchController.searchBar.text?.lowercased() ?? ""
-        if searchText.isEmpty {
-            filteredUsers = users
-        } else {
-            filteredUsers = users.filter {
-                $0.name.lowercased().contains(searchText) ||
-                $0.email.lowercased().contains(searchText)
-            }
-        }
-        tableView.reloadData()
+        viewModel.filterUsers(by: searchText)
     }
     @objc private func didTapLogout() {
         do {

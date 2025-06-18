@@ -1,0 +1,85 @@
+{
+  "" : {
+    "const-values" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/ChatByMadaan-master.swiftconstvalues",
+    "dependencies" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/ChatByMadaan-master.d",
+    "diagnostics" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/ChatByMadaan-master.dia",
+    "emit-module-dependencies" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/ChatByMadaan-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/ChatByMadaan-master-emit-module.dia",
+    "swift-dependencies" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/ChatByMadaan-master.swiftdeps"
+  },
+  "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  },
+  "/Users/ankit.madan/Documents/iOS/ChatByMadaan/ChatByMadaan/App/AppDelegate.swift" : {
+    "index-unit-output-path" : "/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/AppDelegate.o",
+    "llvm-bc" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/AppDelegate.bc",
+    "object" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/AppDelegate.o"
+  },
+  "/Users/ankit.madan/Documents/iOS/ChatByMadaan/ChatByMadaan/App/SceneDelegate.swift" : {
+    "index-unit-output-path" : "/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/SceneDelegate.o",
+    "llvm-bc" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/SceneDelegate.bc",
+    "object" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/SceneDelegate.o"
+  },
+  "/Users/ankit.madan/Documents/iOS/ChatByMadaan/ChatByMadaan/Controllers/ChatViewController.swift" : {
+    "index-unit-output-path" : "/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/ChatViewController-7f1e3dcdec9ab230271066609de65448.o",
+    "llvm-bc" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/ChatViewController-7f1e3dcdec9ab230271066609de65448.bc",
+    "object" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/ChatViewController-7f1e3dcdec9ab230271066609de65448.o"
+  },
+  "/Users/ankit.madan/Documents/iOS/ChatByMadaan/ChatByMadaan/Controllers/LoginRegisterViewController.swift" : {
+    "index-unit-output-path" : "/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/LoginRegisterViewController.o",
+    "llvm-bc" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/LoginRegisterViewController.bc",
+    "object" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/LoginRegisterViewController.o"
+  },
+  "/Users/ankit.madan/Documents/iOS/ChatByMadaan/ChatByMadaan/Controllers/ViewController.swift" : {
+    "index-unit-output-path" : "/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/ViewController.o",
+    "llvm-bc" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/ViewController.bc",
+    "object" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/ViewController.o"
+  },
+  "/Users/ankit.madan/Documents/iOS/ChatByMadaan/ChatByMadaan/Models/Chat.swift" : {
+    "index-unit-output-path" : "/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/Chat.o",
+    "llvm-bc" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/Chat.bc",
+    "object" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/Chat.o"
+  },
+  "/Users/ankit.madan/Documents/iOS/ChatByMadaan/ChatByMadaan/Models/Message.swift" : {
+    "index-unit-output-path" : "/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/Message.o",
+    "llvm-bc" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/Message.bc",
+    "object" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/Message.o"
+  },
+  "/Users/ankit.madan/Documents/iOS/ChatByMadaan/ChatByMadaan/Models/MessageSection.swift" : {
+    "index-unit-output-path" : "/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/MessageSection.o",
+    "llvm-bc" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/MessageSection.bc",
+    "object" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/MessageSection.o"
+  },
+  "/Users/ankit.madan/Documents/iOS/ChatByMadaan/ChatByMadaan/Models/User.swift" : {
+    "index-unit-output-path" : "/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/User.o",
+    "llvm-bc" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/User.bc",
+    "object" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/User.o"
+  },
+  "/Users/ankit.madan/Documents/iOS/ChatByMadaan/ChatByMadaan/Views/ChatTableViewCell.swift" : {
+    "index-unit-output-path" : "/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/ChatTableViewCell.o",
+    "llvm-bc" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/ChatTableViewCell.bc",
+    "object" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/ChatTableViewCell.o"
+  },
+  "/Users/ankit.madan/Documents/iOS/ChatByMadaan/ChatByMadaan/Views/ChatViewController.swift" : {
+    "index-unit-output-path" : "/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/ChatViewController-2afc7835d5302b7f88ea037b87a08e22.o",
+    "llvm-bc" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/ChatViewController-2afc7835d5302b7f88ea037b87a08e22.bc",
+    "object" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/ChatViewController-2afc7835d5302b7f88ea037b87a08e22.o"
+  },
+  "/Users/ankit.madan/Documents/iOS/ChatByMadaan/ChatByMadaan/Views/LoginViewController.swift" : {
+    "index-unit-output-path" : "/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/LoginViewController.o",
+    "llvm-bc" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/LoginViewController.bc",
+    "object" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/LoginViewController.o"
+  },
+  "/Users/ankit.madan/Documents/iOS/ChatByMadaan/ChatByMadaan/Views/RegisterViewController.swift" : {
+    "index-unit-output-path" : "/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/RegisterViewController.o",
+    "llvm-bc" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/RegisterViewController.bc",
+    "object" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/RegisterViewController.o"
+  },
+  "/Users/ankit.madan/Documents/iOS/ChatByMadaan/ChatByMadaan/Views/WelcomeViewController.swift" : {
+    "index-unit-output-path" : "/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/WelcomeViewController.o",
+    "llvm-bc" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/WelcomeViewController.bc",
+    "object" : "/Users/ankit.madan/Documents/iOS/ChatByMadaan/build/ChatByMadaan.build/Release-iphoneos/ChatByMadaan.build/Objects-normal/arm64/WelcomeViewController.o"
+  }
+}
