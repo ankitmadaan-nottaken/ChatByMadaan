@@ -1,8 +1,6 @@
-//
-//  MessageSection.swift
-//  ChatByMadaan
-//
-//  Created by Ankit Madan on 6/17/25.
-//
-
 import Foundation
+
+struct MessageSection {
+    let title: String         // e.g. "Today", "Yesterday", "June 10"
+    var messages: [Message]
+}
